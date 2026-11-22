@@ -100,3 +100,9 @@ El perfil solo se guarda en el navegador si la persona marca «Recordar mi perfi
 ## Fuentes documentales
 
 Generado a partir de `manual_de_consulta_…illes_balears.md` y `correspondencia_titulaciones_y_especialidades_docentes_illes_balears.md` (carpeta superior). Los enlaces marcados como «añadido» o «genérico» en *Fuentes y fiabilidad* no proceden del cuaderno y deben verificarse.
+
+## Publicación (GitHub Pages)
+
+- Repositorio: https://github.com/JuanjoPons/vias-docencia
+- Web pública: https://juanjopons.github.io/vias-docencia/
+- Para publicar cambios: editar los JSON → `node tools/build-data.mjs` → `git add -A && git commit -m "…" && git push`. GitHub Pages se actualiza en 1-2 minutos.
