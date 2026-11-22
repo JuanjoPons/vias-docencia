@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vías a la docencia</title>
+  <meta name="description" content="Orientador interactivo para conocer las vías de acceso a la profesión docente en España y en las Illes Balears.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try { var t = localStorage.getItem('vd.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) { }</script>
+</head>
+<body>
+  <a class="sr-only" href="#view">Saltar al contenido</a>
+  <div class="app">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#/inicio">
+        <span class="brand-mark"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg></span>
+        <span><b>Vías a la docencia</b><small>Orientador · Illes Balears</small></span>
+      </a>
+      <nav id="nav"></nav>
+      <div class="sidebar-foot">
+        <div class="mode-switch" id="modeSwitch" role="group" aria-label="Modo de uso"></div>
+        <div class="foot-row">
+          <button class="btn sm" id="themeBtn" title="Cambiar tema claro/oscuro"></button>
+          <div class="seg lang-seg" id="langSel" role="group" aria-label="Idioma"><button type="button" class="on" data-lang="es" aria-pressed="true">Español</button><button type="button" data-lang="ca" aria-pressed="false" title="Próximamente">Català</button></div>
+        </div>
+        <button class="btn sm ghost" id="clearBtn" title="Borra el perfil guardado en este navegador">Borrar mis datos</button>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <button class="btn icon menu-btn" id="menuBtn" aria-label="Abrir menú"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <span class="crumb" id="crumb">Inicio</span>
+        <span class="spacer"></span>
+        <a class="btn sm cta hide-sm" href="#/simulador">Comprobar mi acceso</a>
+      </header>
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="print-root" aria-hidden="true"></div>
+
+  <!-- Datos generados con tools/build-data.mjs. Si falta bundle.js, se cargan los JSON con fetch (requiere servidor). -->
+  <script src="data/bundle.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/diagram.js"></script>
+  <script src="js/views/inicio.js"></script>
+  <script src="js/views/simulador.js"></script>
+  <script src="js/views/resultados.js"></script>
+  <script src="js/views/vias.js"></script>
+  <script src="js/views/especialidades.js"></script>
+  <script src="js/views/comparador.js"></script>
+  <script src="js/views/info.js"></script>
+  <script src="js/views/actividad.js"></script>
+  <script src="js/report.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

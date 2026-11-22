@@ -1,0 +1,301 @@
+{
+ "_meta": {
+  "descripcion": "Definición didáctica de cada requisito (qué significa, por qué, cómo conseguirlo, dónde). La evaluación con el perfil está en js/engine.js.",
+  "fechaConsulta": "2026-11"
+ },
+ "requisitos": [
+  {
+   "id": "req_correspondencia",
+   "nombre": "Especialidad docente: correspondencia con tu titulación",
+   "grupo": "titulacion",
+   "que": "Relación oficial entre tu título exacto y una especialidad docente.",
+   "porque": "Solo las titulaciones que figuran en los anexos oficiales habilitan; el parecido de nombre no basta.",
+   "como": "Revisa tus especialidades en «Mis posibilidades» y confírmalas en el Anexo 4 (bolsa) o Anexo V / Anexo 7 (oposición).",
+   "donde": "DGPDoCen · Servicio de provisión y bolsas.",
+   "organismo": "s_provisio",
+   "enlace": "interinos",
+   "normativa": [
+    "rd276",
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_generales",
+   "nombre": "Requisitos generales de función pública",
+   "grupo": "administrativo",
+   "que": "Nacionalidad española o UE (o tratados), 18 años, capacidad funcional, no estar inhabilitado y certificado negativo de delitos sexuales.",
+   "porque": "Son comunes a toda la docencia pública.",
+   "como": "Reúne DNI/NIE y solicita el certificado del Registro Central de Delincuentes Sexuales.",
+   "donde": "Ministerio de Justicia (certificado) y la propia solicitud de la convocatoria.",
+   "organismo": "dgpdocen",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "trlebep",
+    "lo8_2021"
+   ]
+  },
+  {
+   "id": "req_tit_opos",
+   "nombre": "Titulación para oposiciones 0590",
+   "grupo": "titulacion",
+   "que": "Doctor, Licenciado, Ingeniero, Arquitecto o Grado; Diplomatura/Ing. Técnica solo en especialidades del Anexo V.",
+   "porque": "La LOE fija el nivel de titulación de cada cuerpo.",
+   "como": "Comprueba la especialidad en el Anexo V del RD 276/2007 y el Anexo 7 de la convocatoria.",
+   "donde": "BOIB 21/2026 y portal DGPDoCen.",
+   "organismo": "dgpdocen",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "loe",
+    "rd276",
+    "boib21_2026"
+   ]
+  },
+  {
+   "id": "req_anexo4",
+   "nombre": "Titulación incluida en el Anexo 4",
+   "grupo": "titulacion",
+   "que": "Tu título (o su ámbito de conocimiento) debe figurar en el Anexo 4 para la especialidad.",
+   "porque": "La bolsa de Baleares usa un catálogo cerrado: la similitud de nombre no basta.",
+   "como": "Busca tu título en el Anexo 4. Si no está y tienes 60 ECTS afines, solicita su inclusión hasta el 31 de agosto.",
+   "donde": "DGPDoCen · Servicio de provisión y bolsas.",
+   "organismo": "s_provisio",
+   "enlace": "inclusion",
+   "normativa": [
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_tit_0598",
+   "nombre": "Especialidad del cuerpo 0598",
+   "grupo": "titulacion",
+   "que": "Tu TS o Grado debe corresponder a una de las 10 especialidades de sectores singulares.",
+   "porque": "El cuerpo 0598 no incluye otras familias (p. ej. Administración o Informática).",
+   "como": "Comprueba tu título en el subapartado de la especialidad del Anexo 4.",
+   "donde": "DGPDoCen.",
+   "organismo": "dgpdocen",
+   "enlace": "interinos",
+   "normativa": [
+    "rd276",
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_master",
+   "nombre": "Máster de Formación del Profesorado",
+   "grupo": "pedagogica",
+   "que": "Máster universitario (art. 100.2 LOE) o dispensa anterior al 01/10/2009 (CAP, Maestro, Pedagogía, 12 meses de docencia…).",
+   "porque": "Es la formación pedagógica obligatoria para ESO, Bachillerato y FP.",
+   "como": "Matricúlate en un Máster oficial de Profesorado de la especialidad.",
+   "donde": "Universidades (en Baleares, la UIB).",
+   "organismo": "ministerio",
+   "enlace": "todofp",
+   "normativa": [
+    "loe",
+    "ordeneci3858"
+   ]
+  },
+  {
+   "id": "req_pedagogica",
+   "nombre": "Formación pedagógica (Máster o Curso 60 ECTS)",
+   "grupo": "pedagogica",
+   "que": "Universitarios: Máster de Profesorado. Técnicos Superiores: Curso Oficial de Formación Pedagógica y Didáctica Equivalente (60 ECTS).",
+   "porque": "Los TS no pueden acceder al Máster; la Orden EDU/2645/2011 crea un curso equivalente.",
+   "como": "TS: curso semipresencial de la UIB/FUEIB con prácticas en centros de Baleares.",
+   "donde": "FUEIB / UIBTalent.",
+   "organismo": "fueib",
+   "enlace": "fueib",
+   "normativa": [
+    "loe",
+    "orden2645"
+   ]
+  },
+  {
+   "id": "req_pedagogica_prioridad",
+   "nombre": "Formación pedagógica (da prioridad)",
+   "grupo": "pedagogica",
+   "que": "En urgencias tiene prioridad quien acredita Máster o Curso 60 ECTS.",
+   "porque": "La base 13.1 ordena primero a quien reúne todos los requisitos.",
+   "como": "Obtén el Máster o el Curso 60 ECTS para no depender de excepciones.",
+   "donde": "Universidades / FUEIB.",
+   "organismo": "dgpdocen",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_condicion",
+   "nombre": "Acreditación adicional (asterisco del Anexo 4)",
+   "grupo": "experiencia",
+   "que": "Según la correspondencia: 2 años de experiencia laboral (TS), 30 ECTS afines (Grados) o 1 de 4 alternativas.",
+   "porque": "El asterisco condiciona la habilitación de ese título.",
+   "como": "Vida laboral + contratos o certificado de empresa (experiencia); certificación académica con asignaturas básicas/obligatorias (ECTS).",
+   "donde": "Seguridad Social (vida laboral); tu universidad (certificación).",
+   "organismo": "s_adjudicacio",
+   "enlace": "interinos",
+   "normativa": [
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_ccs",
+   "nombre": "Catalán: certificado CCS",
+   "grupo": "linguistico",
+   "que": "Certificado de Capacitación para la enseñanza en lengua catalana en Secundaria, o equivalente.",
+   "porque": "Es obligatorio para oposiciones y para la lista de admitidos. El C1 solo no basta.",
+   "como": "Obtén el CCS según la Orden de 8 de marzo de 2018. Exención: servicios en el cuerpo de Maestros en Baleares desde el 01/09/2020.",
+   "donde": "Conselleria d'Educació i Universitats.",
+   "organismo": "conselleria",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "decreto115",
+    "orden8mar2018"
+   ]
+  },
+  {
+   "id": "req_ccs_excluidos",
+   "nombre": "Catalán: CCS (o lista de excluidos)",
+   "grupo": "linguistico",
+   "que": "Con CCS: lista de admitidos. Sin CCS: lista de excluidos por catalán.",
+   "porque": "Permite incorporarse aunque sin adjudicaciones ordinarias.",
+   "como": "Obtén el CCS para pasar a admitidos.",
+   "donde": "Conselleria d'Educació i Universitats.",
+   "organismo": "conselleria",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "decreto115"
+   ]
+  },
+  {
+   "id": "req_ccs_flex",
+   "nombre": "Catalán: flexible en urgencias",
+   "grupo": "linguistico",
+   "que": "Tiene prioridad quien acredita CCS, pero se puede adjudicar sin él si no hay admitidos.",
+   "porque": "La urgencia busca cubrir plazas difíciles.",
+   "como": "Inscríbete en los trámites urgentes; obtener el CCS mejora tu orden.",
+   "donde": "Web DGPDoCen.",
+   "organismo": "dgpdocen",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_ccs_concertados",
+   "nombre": "Catalán en centros concertados",
+   "grupo": "linguistico",
+   "que": "En concertados se exige el CCS (Decreto 115/2001). En privados no concertados la base documental no lo detalla.",
+   "porque": "La Conselleria lo verifica para el pago delegado.",
+   "como": "Obtén el CCS.",
+   "donde": "Conselleria d'Educació i Universitats.",
+   "organismo": "conselleria",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "decreto115"
+   ]
+  },
+  {
+   "id": "req_catalan_convocatoria",
+   "nombre": "Catalán según convocatoria",
+   "grupo": "linguistico",
+   "que": "El requisito lo fija cada convocatoria de expertos.",
+   "porque": "Las bases específicas pueden flexibilizarlo si no hay candidatos.",
+   "como": "Lee las bases de la convocatoria concreta.",
+   "donde": "BOIB 17/2026 / sede CAIB.",
+   "organismo": "s_adjudicacio",
+   "enlace": "expertos",
+   "normativa": [
+    "boib17_2026"
+   ]
+  },
+  {
+   "id": "req_inscripcion",
+   "nombre": "Inscripción en la bolsa",
+   "grupo": "procedimiento",
+   "que": "Presentar la solicitud en la convocatoria anual de interinos.",
+   "porque": "Estar habilitado no es lo mismo que estar en la bolsa.",
+   "como": "Solicitud telemática en el plazo de la convocatoria, con méritos.",
+   "donde": "Portal de gestión de interinos.",
+   "organismo": "s_provisio",
+   "enlace": "interinos",
+   "normativa": [
+    "boib15_2026"
+   ]
+  },
+  {
+   "id": "req_exp_sector",
+   "nombre": "Experiencia en el sector productivo",
+   "grupo": "experiencia",
+   "que": "Experiencia profesional acreditada en el sector de la especialidad convocada.",
+   "porque": "Es el requisito central del profesorado experto.",
+   "como": "Vida laboral + contratos o certificados de empresa; autónomos, documentación de alta.",
+   "donde": "Sede electrónica CAIB (trámite de expertos).",
+   "organismo": "s_adjudicacio",
+   "enlace": "expertos",
+   "normativa": [
+    "res27sep2023",
+    "boib17_2026"
+   ]
+  },
+  {
+   "id": "req_tit_abc",
+   "nombre": "Titulación o experiencia (art. 168 RD 659/2023)",
+   "grupo": "titulacion",
+   "que": "Titulación relacionada (universitaria, Técnico, TS o CP 2-3), especialidad docente de FP o 4 años de experiencia.",
+   "porque": "Es el requisito de competencia técnica del formador.",
+   "como": "Comprueba en el RD del certificado profesional qué titulación se exige al formador.",
+   "donde": "SOIB · Instrucción 6/2025.",
+   "organismo": "soib",
+   "enlace": "soib",
+   "normativa": [
+    "rd659",
+    "instr6_2025"
+   ]
+  },
+  {
+   "id": "req_ssce0110",
+   "nombre": "Certificado SSCE0110 (o exención)",
+   "grupo": "pedagogica",
+   "que": "Certificado profesional de habilitación para la docencia en grados A, B y C.",
+   "porque": "Es la competencia docente exigida fuera del sistema educativo.",
+   "como": "Curso en CIFP L'Embat, Centre Blancadona o Centre de la Mar; o acreditación por experiencia (IQPIB). Exentos: Pedagogía/Psicopedagogía/Magisterio, univ. + CAP, Máster, Curso 60 ECTS, 600 h de docencia en 10 años.",
+   "donde": "SOIB / IQPIB.",
+   "organismo": "soib",
+   "enlace": "soib",
+   "normativa": [
+    "instr6_2025",
+    "rd659"
+   ]
+  },
+  {
+   "id": "req_contenidos",
+   "nombre": "Relación con el módulo a impartir",
+   "grupo": "procedimiento",
+   "que": "Tu plan de estudios o experiencia debe estar relacionado con los resultados de aprendizaje del módulo.",
+   "porque": "Cada certificado fija su propio perfil de formador.",
+   "como": "Consulta el RD regulador del certificado; el centro lo verifica en la declaración responsable.",
+   "donde": "SOIB y centro de formación.",
+   "organismo": "soib",
+   "enlace": "soib",
+   "normativa": [
+    "rd659",
+    "instr6_2025"
+   ]
+  },
+  {
+   "id": "req_habilitacion",
+   "nombre": "Habilitación para la especialidad",
+   "grupo": "titulacion",
+   "que": "La misma titulación que se exige en los centros públicos.",
+   "porque": "Arts. 94-95 LOE y RD 1834/2008 se aplican también a los centros privados.",
+   "como": "Comprueba tu correspondencia titulación-especialidad.",
+   "donde": "DGPDoCen (verificación en concertados).",
+   "organismo": "dgpdocen",
+   "enlace": "dgpdocen",
+   "normativa": [
+    "loe",
+    "rd1834"
+   ]
+  }
+ ]
+}

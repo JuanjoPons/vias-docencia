@@ -1,0 +1,307 @@
+{
+  "_meta": { "descripcion": "Vías de acceso: ficha, matriz comparativa y diagrama de flujo propio de cada vía. Nodos: paso (fila), col (l|c|r), tipo (inicio|academico|pedagogico|experiencia|linguistico|procedimiento|decision|resultado|alternativa), caracter (obligatorio|condicional|informativo), req (requisito evaluado con el perfil).", "fechaConsulta": "2026-11" },
+  "familias": [
+    { "id": "publica", "nombre": "Función pública docente", "color": "#4f7cff", "detalle": "Ingreso como funcionario/a de carrera" },
+    { "id": "interinidad", "nombre": "Interinidad", "color": "#ff8a3d", "detalle": "Bolsas y nombramientos temporales en centros públicos" },
+    { "id": "laboral", "nombre": "Contratación laboral y privada", "color": "#ff4f9a", "detalle": "Expertos del sector productivo y centros privados" },
+    { "id": "sistemafp", "nombre": "Sistema de FP para el empleo", "color": "#19c9c1", "detalle": "Grados A, B y C fuera del sistema educativo" }
+  ],
+  "vias": [
+    {
+      "id": "opos0590", "nombre": "Oposiciones al cuerpo de Profesores de Enseñanza Secundaria", "corto": "Oposiciones 0590", "familia": "publica", "icono": "landmark",
+      "lema": "Plaza fija en ESO, Bachillerato y FP",
+      "ficha": {
+        "destinatarios": "Titulados universitarios (Grado, Licenciatura, Ingeniería, Arquitectura; Diplomatura o Ing. Técnica solo en especialidades del Anexo V).",
+        "titulaciones": "Universitaria según el Anexo V del RD 276/2007 y el Anexo 7 de la convocatoria. En oposición no se exige afinidad de la carrera, solo el nivel.",
+        "pedagogica": "Máster de Formación del Profesorado (art. 100.2 LOE) o exención anterior al 01/10/2009.",
+        "experiencia": "No exigida como requisito; puntúa en la fase de concurso.",
+        "linguistico": "CCS (Certificado de Capacitación para la enseñanza en lengua catalana en Secundaria) o equivalente.",
+        "documentacion": ["Título universitario", "Máster de Profesorado o documento de exención", "Certificado CCS", "Requisitos generales: nacionalidad, edad, capacidad funcional, no inhabilitación", "Certificado negativo del Registro Central de Delincuentes Sexuales", "Méritos para la fase de concurso"],
+        "procedimiento": ["Publicación de la convocatoria en el BOIB", "Solicitud y pago de tasas en plazo", "Fase de oposición (pruebas)", "Fase de concurso (méritos)", "Nombramiento como funcionario/a en prácticas y de carrera"],
+        "organismo": "dgpdocen",
+        "enlaces": ["dgpdocen", "todofp"],
+        "normativa": ["loe", "rd276", "boib21_2026"],
+        "nota": "En 2026 se convocaron 630 plazas, 438 del cuerpo 0590 (BOIB 21/2026)."
+      },
+      "matriz": { "titulacion": "Universitaria", "pedagogia": "Máster", "experiencia": "no", "catalan": "si", "modo": "Oposición", "centro": "Centros públicos", "docencia": "ESO, Bachillerato y FP (grados D y E)", "organismo": "DGPDoCen" },
+      "requisitos": ["req_generales", "req_tit_opos", "req_master", "req_ccs"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Titulado/a universitario/a", "resumen": "Punto de partida: título universitario oficial.", "caracter": "obligatorio", "req": "req_tit_opos", "requisitos": ["Grado, Licenciatura, Ingeniería o Arquitectura"], "documentacion": ["Título o resguardo de pago de tasas de expedición"], "fuente": "rd276" },
+          { "id": "b", "paso": 2, "col": "l", "tipo": "academico", "titulo": "Especialidades generales", "resumen": "ESO, Bachillerato y FP: Doctor, Licenciado, Ingeniero, Arquitecto o Grado. No se exige afinidad.", "caracter": "obligatorio", "requisitos": ["Nivel MECES de Grado o superior"], "documentacion": ["Título universitario"], "fuente": "rd276" },
+          { "id": "c", "paso": 2, "col": "r", "tipo": "academico", "titulo": "Especialidades del Anexo V", "resumen": "En especialidades de FP del Anexo V también valen Diplomatura, Arquitectura Técnica o Ingeniería Técnica.", "caracter": "condicional", "requisitos": ["Especialidad incluida en el Anexo V del RD 276/2007"], "documentacion": ["Título de Diplomatura / Ing. Técnica / Arq. Técnica"], "fuente": "rd276" },
+          { "id": "d", "paso": 3, "col": "c", "tipo": "pedagogico", "titulo": "Máster de Profesorado", "resumen": "Obligatorio, salvo dispensas anteriores al 01/10/2009 (CAP, Maestro, Pedagogía, 12 meses de docencia…).", "caracter": "obligatorio", "req": "req_master", "requisitos": ["Máster art. 100.2 LOE", "o exención anterior al 01/10/2009"], "documentacion": ["Título de Máster o acreditación de la dispensa"], "fuente": "loe" },
+          { "id": "e", "paso": 4, "col": "c", "tipo": "experiencia", "titulo": "Experiencia: no exigida", "resumen": "No es requisito de acceso; se valora como mérito en la fase de concurso.", "caracter": "informativo", "requisitos": [], "documentacion": ["Certificados de servicios (como mérito)"], "fuente": "boib21_2026" },
+          { "id": "f", "paso": 5, "col": "c", "tipo": "linguistico", "titulo": "Catalán: CCS", "resumen": "Certificado de Capacitación para la enseñanza en lengua catalana en Secundaria. El C1 solo no basta.", "caracter": "obligatorio", "req": "req_ccs", "requisitos": ["CCS o equivalente (Orden 8/03/2018)"], "documentacion": ["Certificado CCS"], "fuente": "decreto115" },
+          { "id": "g", "paso": 6, "col": "c", "tipo": "procedimiento", "titulo": "Solicitud en la convocatoria", "resumen": "Presentación de la solicitud y tasas en el plazo del BOIB.", "caracter": "obligatorio", "requisitos": ["Requisitos generales de función pública", "Certificado negativo de delitos sexuales"], "documentacion": ["Solicitud", "Justificante de tasas", "DNI/NIE"], "fuente": "boib21_2026", "enlace": "dgpdocen" },
+          { "id": "h", "paso": 7, "col": "c", "tipo": "procedimiento", "titulo": "Oposición + concurso", "resumen": "Pruebas de la fase de oposición y valoración de méritos.", "caracter": "obligatorio", "requisitos": ["Superar las pruebas"], "documentacion": ["Méritos (experiencia, formación, expediente)"], "fuente": "boib21_2026" },
+          { "id": "i", "paso": 8, "col": "c", "tipo": "resultado", "titulo": "Funcionario/a de carrera · Cuerpo 0590", "resumen": "Prácticas y nombramiento como funcionario/a de carrera (grupo A1).", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "loe" }
+        ],
+        "aristas": [["a","b"],["a","c"],["b","d"],["c","d"],["d","e"],["e","f"],["f","g"],["g","h"],["h","i"]]
+      }
+    },
+    {
+      "id": "bolsa", "nombre": "Bolsa ordinaria de interinos", "corto": "Bolsa de interinos", "familia": "interinidad", "icono": "list",
+      "lema": "Vacantes y sustituciones en centros públicos",
+      "ficha": {
+        "destinatarios": "Titulados universitarios y Técnicos Superiores cuya titulación figure en el Anexo 4 de la convocatoria anual.",
+        "titulaciones": "Exclusivamente las del Anexo 4 (BOIB 15/2026). Si tu Grado no está, no habilita en 2026-2027 (salvo mantenimiento transitorio del punto 4.2).",
+        "pedagogica": "Máster de Profesorado (universitarios) o Curso de 60 ECTS (Técnicos Superiores), o exención.",
+        "experiencia": "Solo si tu titulación lleva asterisco en el Anexo 4: 2 años (TS) o 30 ECTS/alternativas (Grados).",
+        "linguistico": "CCS obligatorio para la lista de admitidos. Sin él entras en la lista de excluidos por catalán.",
+        "documentacion": ["Título incluido en el Anexo 4", "Máster / Curso 60 ECTS o exención", "Certificado CCS", "Vida laboral y contratos (si hay asterisco de experiencia)", "Certificación académica (si hay asterisco de ECTS)", "Méritos del baremo (Anexo 3)"],
+        "procedimiento": ["Convocatoria anual (BOIB)", "Solicitud telemática y méritos", "Listas de admitidos y excluidos", "Adjudicación de destinos provisionales (verano)", "Adjudicaciones de sustituciones durante el curso"],
+        "organismo": "s_provisio",
+        "enlaces": ["interinos", "inclusion", "dgpdocen"],
+        "normativa": ["trlebep", "ley1_2022", "boib15_2026"],
+        "nota": "Renunciar sin justificación a una plaza adjudicada excluye de la bolsa ese curso (base 18.ª)."
+      },
+      "matriz": { "titulacion": "Universitaria o TS (Anexo 4)", "pedagogia": "Máster / 60 ECTS", "experiencia": "cond", "catalan": "si", "modo": "Bolsa", "centro": "Centros públicos", "docencia": "ESO, Bachillerato y FP", "organismo": "DGPDoCen" },
+      "requisitos": ["req_generales", "req_anexo4", "req_pedagogica", "req_condicion", "req_ccs", "req_inscripcion"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Titulación universitaria o TS", "resumen": "Punto de partida: tu título exacto.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Título"], "fuente": "boib15_2026" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "decision", "titulo": "¿Figura en el Anexo 4?", "resumen": "El Anexo 4 es un catálogo cerrado: la similitud de nombre no basta.", "caracter": "obligatorio", "req": "req_anexo4", "requisitos": ["Título o ámbito listado para la especialidad"], "documentacion": [], "fuente": "boib15_2026", "enlace": "interinos" },
+          { "id": "c", "paso": 3, "col": "l", "tipo": "academico", "titulo": "Sí, sin asterisco", "resumen": "Acceso directo a la especialidad.", "caracter": "obligatorio", "requisitos": ["Título listado sin llamadas"], "documentacion": ["Título"], "fuente": "boib15_2026" },
+          { "id": "d", "paso": 3, "col": "c", "tipo": "experiencia", "titulo": "Sí, con asterisco (*)", "resumen": "Grados: 30 ECTS afines o alternativas. TS: 2 años de experiencia laboral en la familia.", "caracter": "condicional", "req": "req_condicion", "requisitos": ["30 ECTS básicos/obligatorios", "o 2 años de experiencia (TS)"], "documentacion": ["Certificación académica", "Vida laboral y contratos"], "fuente": "boib15_2026" },
+          { "id": "e", "paso": 3, "col": "r", "tipo": "alternativa", "titulo": "No figura", "resumen": "Solicita la inclusión (60 ECTS afines) hasta el 31 de agosto para el curso siguiente.", "caracter": "condicional", "requisitos": ["60 ECTS básicos/obligatorios afines"], "documentacion": ["Plan de estudios", "Certificación académica personal"], "fuente": "boib15_2026", "enlace": "inclusion" },
+          { "id": "f", "paso": 4, "col": "c", "tipo": "pedagogico", "titulo": "Máster o Curso 60 ECTS", "resumen": "Universitarios: Máster. Técnicos Superiores: Curso de formación pedagógica equivalente.", "caracter": "obligatorio", "req": "req_pedagogica", "requisitos": ["Máster art. 100.2 LOE", "Curso 60 ECTS (Orden EDU/2645/2011)"], "documentacion": ["Título o certificado"], "fuente": "boib15_2026" },
+          { "id": "g", "paso": 5, "col": "c", "tipo": "procedimiento", "titulo": "Solicitud y baremo", "resumen": "Solicitud telemática en plazo; ordenación por méritos (Anexo 3).", "caracter": "obligatorio", "req": "req_inscripcion", "requisitos": ["Presentar solicitud en plazo"], "documentacion": ["Méritos: experiencia, expediente, formación"], "fuente": "boib15_2026", "enlace": "interinos" },
+          { "id": "h", "paso": 6, "col": "l", "tipo": "linguistico", "titulo": "Con CCS: admitidos", "resumen": "Entras en la lista de admitidos ordenada por baremo.", "caracter": "obligatorio", "req": "req_ccs", "requisitos": ["Certificado CCS"], "documentacion": ["Certificado CCS"], "fuente": "decreto115" },
+          { "id": "i", "paso": 6, "col": "r", "tipo": "alternativa", "titulo": "Sin CCS: excluidos por catalán", "resumen": "No recibes adjudicaciones ordinarias; solo trámites urgentes cuando se agotan los admitidos.", "caracter": "condicional", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "j", "paso": 7, "col": "c", "tipo": "resultado", "titulo": "Adjudicaciones", "resumen": "Destinos provisionales en verano y sustituciones durante el curso.", "caracter": "informativo", "requisitos": ["No renunciar sin causa justificada (base 18.ª)"], "documentacion": [], "fuente": "boib15_2026" }
+        ],
+        "aristas": [["a","b"],["b","c","sí"],["b","d","con *"],["b","e","no"],["c","f"],["d","f"],["f","g"],["g","h","con CCS"],["g","i","sin CCS"],["h","j"],["i","j","urgencia"]]
+      }
+    },
+    {
+      "id": "extraordinaria", "nombre": "Bolsas extraordinarias de interinos", "corto": "Bolsa extraordinaria", "familia": "interinidad", "icono": "layers",
+      "lema": "Cuando una lista se prevé agotada",
+      "ficha": {
+        "destinatarios": "Aspirantes con titulación del Anexo 4 para especialidades o islas con listas agotadas.",
+        "titulaciones": "Las del Anexo 4 para la especialidad convocada.",
+        "pedagogica": "Máster de Profesorado o Curso 60 ECTS, según cuerpo.",
+        "experiencia": "Según especialidad (asteriscos del Anexo 4).",
+        "linguistico": "CCS obligatorio para admitidos; sin CCS se puede entrar en la lista de excluidos por catalán.",
+        "documentacion": ["Título del Anexo 4", "Formación pedagógica", "Certificado CCS (si se tiene)", "Expediente académico (nota media)"],
+        "procedimiento": ["Convocatoria puntual de la DGPDoCen", "Solicitud en plazo", "Baremo simplificado o nota media del expediente", "Incorporación a lista específica"],
+        "organismo": "dgpdocen",
+        "enlaces": ["dgpdocen", "interinos"],
+        "normativa": ["boib15_2026"],
+        "nota": "La base documental no recoge convocatorias extraordinarias concretas: consulta el tablón de la DGPDoCen."
+      },
+      "matriz": { "titulacion": "Anexo 4", "pedagogia": "Máster / 60 ECTS", "experiencia": "cond", "catalan": "cond", "modo": "Bolsa", "centro": "Centros públicos", "docencia": "ESO, Bachillerato y FP", "organismo": "DGPDoCen" },
+      "requisitos": ["req_generales", "req_anexo4", "req_pedagogica", "req_condicion", "req_ccs_excluidos"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Lista agotada", "resumen": "La DGPDoCen prevé que una especialidad o isla se quede sin aspirantes.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "procedimiento", "titulo": "Convocatoria extraordinaria", "resumen": "Publicación puntual con plazo propio.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "boib15_2026", "enlace": "dgpdocen" },
+          { "id": "c", "paso": 3, "col": "c", "tipo": "academico", "titulo": "Titulación del Anexo 4", "resumen": "Debe estar listada para la especialidad convocada.", "caracter": "obligatorio", "req": "req_anexo4", "requisitos": ["Título o ámbito del Anexo 4"], "documentacion": ["Título"], "fuente": "boib15_2026" },
+          { "id": "d", "paso": 4, "col": "c", "tipo": "pedagogico", "titulo": "Formación pedagógica", "resumen": "Máster (universitarios) o Curso 60 ECTS (TS).", "caracter": "obligatorio", "req": "req_pedagogica", "requisitos": ["Máster o Curso 60 ECTS"], "documentacion": ["Título o certificado"], "fuente": "boib15_2026" },
+          { "id": "e", "paso": 5, "col": "l", "tipo": "linguistico", "titulo": "Con CCS", "resumen": "Lista de admitidos.", "caracter": "obligatorio", "req": "req_ccs_excluidos", "requisitos": ["CCS"], "documentacion": ["Certificado CCS"], "fuente": "decreto115" },
+          { "id": "f", "paso": 5, "col": "r", "tipo": "alternativa", "titulo": "Sin CCS", "resumen": "Lista de excluidos por catalán.", "caracter": "condicional", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "g", "paso": 6, "col": "c", "tipo": "procedimiento", "titulo": "Baremo simplificado", "resumen": "Ordenación por baremo simplificado o nota media del expediente.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Certificación académica"], "fuente": "boib15_2026" },
+          { "id": "h", "paso": 7, "col": "c", "tipo": "resultado", "titulo": "Lista específica", "resumen": "Incorporación a la lista extraordinaria de la especialidad.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" }
+        ],
+        "aristas": [["a","b"],["b","c"],["c","d"],["d","e"],["d","f"],["e","g"],["f","g"],["g","h"]]
+      }
+    },
+    {
+      "id": "urgencia", "nombre": "Trámites de urgencia (base 12.1.3)", "corto": "Trámite de urgencia", "familia": "interinidad", "icono": "zap",
+      "lema": "Plazas difíciles de cubrir, plazos de 24-48 h",
+      "ficha": {
+        "destinatarios": "Integrantes de la bolsa de otras especialidades o nuevos aspirantes fuera de la bolsa 2026-2027.",
+        "titulaciones": "Las del Anexo 4 para la especialidad convocada (y excepciones de la DA 9.ª de la Ley 12/2023).",
+        "pedagogica": "Prioridad para quien tiene Máster / Curso 60 ECTS. Sin Máster, solo en especialidades de difícil cobertura autorizadas (orientativo).",
+        "experiencia": "Según especialidad.",
+        "linguistico": "Flexible: prioridad con CCS, pero puede adjudicarse sin CCS si no hay candidatos.",
+        "documentacion": ["Título del Anexo 4", "Formación pedagógica (si se tiene)", "Expediente académico (nota media)"],
+        "procedimiento": ["Convocatoria telemática en la web de la DGPDoCen", "Inscripción en 24-48 h", "Orden de prelación (base 13.1)", "Adjudicación", "Si tomas posesión con Máster y sin CCS: entras en la bolsa como excluido por catalán (0 puntos)"],
+        "organismo": "s_adjudicacio",
+        "enlaces": ["dgpdocen"],
+        "normativa": ["boib15_2026", "ley12_2023"],
+        "nota": "No pueden participar quienes estén excluidos por las causas de la base 18.ª (letras b, c, e, g, h, j, k, l, m)."
+      },
+      "matriz": { "titulacion": "Anexo 4 (o excepción)", "pedagogia": "Prioridad con Máster", "experiencia": "cond", "catalan": "flex", "modo": "Adjudicación urgente", "centro": "Centros públicos", "docencia": "ESO, Bachillerato y FP", "organismo": "DGPDoCen" },
+      "requisitos": ["req_generales", "req_anexo4", "req_pedagogica_prioridad", "req_ccs_flex"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Plaza sin aspirantes", "resumen": "La bolsa ordinaria de esa especialidad e isla está agotada.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "procedimiento", "titulo": "Convocatoria web (24-48 h)", "resumen": "Trámite telemático publicado en la web de la DGPDoCen.", "caracter": "obligatorio", "requisitos": ["Consultar el tablón a diario"], "documentacion": [], "fuente": "boib15_2026", "enlace": "dgpdocen" },
+          { "id": "c", "paso": 3, "col": "l", "tipo": "academico", "titulo": "Integrantes de otra bolsa", "resumen": "Personas ya en la bolsa de otras especialidades.", "caracter": "condicional", "requisitos": ["No estar excluido por la base 18.ª"], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "d", "paso": 3, "col": "r", "tipo": "academico", "titulo": "Nuevos aspirantes", "resumen": "Personas que no forman parte de la bolsa 2026-2027.", "caracter": "condicional", "requisitos": ["Titulación del Anexo 4"], "documentacion": ["Título"], "fuente": "boib15_2026" },
+          { "id": "e", "paso": 4, "col": "c", "tipo": "academico", "titulo": "Titulación del Anexo 4", "resumen": "O titulaciones excepcionales (DA 9.ª Ley 12/2023).", "caracter": "obligatorio", "req": "req_anexo4", "requisitos": ["Anexo 4 de la especialidad"], "documentacion": ["Título"], "fuente": "ley12_2023" },
+          { "id": "f", "paso": 5, "col": "c", "tipo": "decision", "titulo": "Orden de prelación (base 13.1)", "resumen": "Primero quien reúne titulación + Máster + CCS; después, el resto por nota media.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Expediente académico"], "fuente": "boib15_2026" },
+          { "id": "g", "paso": 6, "col": "l", "tipo": "linguistico", "titulo": "Sin CCS", "resumen": "Se adjudica si no hay admitidos disponibles.", "caracter": "condicional", "req": "req_ccs_flex", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "h", "paso": 6, "col": "r", "tipo": "pedagogico", "titulo": "Sin Máster (orientativo)", "resumen": "Solo en especialidades de difícil cobertura autorizadas, si se agotan los candidatos con Máster.", "caracter": "condicional", "req": "req_pedagogica_prioridad", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "i", "paso": 7, "col": "c", "tipo": "resultado", "titulo": "Adjudicación de la plaza", "resumen": "Nombramiento como interino/a para esa plaza.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "boib15_2026" },
+          { "id": "j", "paso": 8, "col": "c", "tipo": "resultado", "titulo": "Integración en la bolsa", "resumen": "Con Máster y sin CCS, al tomar posesión entras como excluido por catalán, con 0 puntos.", "caracter": "condicional", "requisitos": ["Tomar posesión", "Tener formación pedagógica"], "documentacion": [], "fuente": "boib15_2026" }
+        ],
+        "aristas": [["a","b"],["b","c"],["b","d"],["c","e"],["d","e"],["e","f"],["f","g"],["f","h"],["g","i"],["h","i"],["i","j"]]
+      }
+    },
+    {
+      "id": "singulares0598", "nombre": "Profesorado especialista en sectores singulares de FP (cuerpo 0598)", "corto": "Cuerpo 0598", "familia": "publica", "icono": "wrench",
+      "lema": "10 especialidades prácticas con título de Técnico Superior",
+      "ficha": {
+        "destinatarios": "Técnicos Superiores (o Técnicos Especialistas) de la familia y titulados universitarios equivalentes.",
+        "titulaciones": "Solo 10 especialidades: Cocina y Pastelería, Estética, Carpintería y Mobiliario, Mantenimiento de Vehículos, Mecanizado, Patronaje, Peluquería, Artes Gráficas, Servicios de Restauración y Soldadura.",
+        "pedagogica": "TS: Curso Oficial de Formación Pedagógica y Didáctica Equivalente (60 ECTS, FUEIB/UIB). Universitarios: Máster. Exención: 12 meses de docencia antes del 01/09/2014.",
+        "experiencia": "TS con asterisco en el Anexo 4: 2 años en la familia. Grados: 30 ECTS o 1 de 4 alternativas.",
+        "linguistico": "CCS o equivalente.",
+        "documentacion": ["Título de TS/TE o universitario", "Curso 60 ECTS / Máster", "Vida laboral y contratos o certificado de empresa / autónomo", "Certificado CCS"],
+        "procedimiento": ["Oposición (ingreso libre) o bolsa de interinos (Anexo 4)", "Solicitud en plazo", "Fase de oposición y concurso / baremo", "Nombramiento"],
+        "organismo": "dgpdocen",
+        "enlaces": ["fueib", "interinos", "dgpdocen"],
+        "normativa": ["rd276", "orden2645", "boib15_2026", "boib21_2026"],
+        "nota": "Oposiciones 2026: 38 plazas (Cocina y Pastelería, Carpintería y Mobiliario, Mantenimiento de Vehículos, Servicios de Restauración)."
+      },
+      "matriz": { "titulacion": "TS de FP o universitaria", "pedagogia": "Curso 60 ECTS / Máster", "experiencia": "cond", "catalan": "si", "modo": "Oposición y bolsa", "centro": "Centros públicos", "docencia": "Módulos de FP de 10 especialidades", "organismo": "DGPDoCen" },
+      "requisitos": ["req_generales", "req_tit_0598", "req_pedagogica", "req_condicion", "req_ccs"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "TS de FP o universitario", "resumen": "Técnico Superior / Técnico Especialista, o titulación universitaria equivalente.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Título"], "fuente": "rd276" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "decision", "titulo": "¿Una de las 10 especialidades?", "resumen": "El cuerpo 0598 solo comprende 10 especialidades prácticas.", "caracter": "obligatorio", "req": "req_tit_0598", "requisitos": [], "documentacion": [], "fuente": "rd276" },
+          { "id": "c", "paso": 3, "col": "l", "tipo": "experiencia", "titulo": "Con TS: 2 años", "resumen": "Títulos con asterisco: 2 años de experiencia laboral en la familia.", "caracter": "condicional", "req": "req_condicion", "requisitos": ["2 años en la familia profesional"], "documentacion": ["Vida laboral", "Contratos o certificado de empresa"], "fuente": "boib15_2026" },
+          { "id": "d", "paso": 3, "col": "c", "tipo": "academico", "titulo": "Con Grado: acreditación", "resumen": "30 ECTS afines o 1 de 4 alternativas, según especialidad.", "caracter": "condicional", "requisitos": ["30 ECTS", "o experiencia / título de FP de la familia"], "documentacion": ["Certificación académica"], "fuente": "boib15_2026" },
+          { "id": "e", "paso": 3, "col": "r", "tipo": "alternativa", "titulo": "No está entre las 10", "resumen": "Explora los grados A, B y C o el profesorado experto.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd276" },
+          { "id": "f", "paso": 4, "col": "c", "tipo": "pedagogico", "titulo": "Curso 60 ECTS o Máster", "resumen": "TS: curso equivalente (UIB/FUEIB, semipresencial). Universitarios: Máster.", "caracter": "obligatorio", "req": "req_pedagogica", "requisitos": ["Curso 60 ECTS (Orden EDU/2645/2011)", "o exención antes del 01/09/2014"], "documentacion": ["Certificado del curso"], "fuente": "orden2645", "enlace": "fueib" },
+          { "id": "g", "paso": 5, "col": "c", "tipo": "linguistico", "titulo": "Catalán: CCS", "resumen": "Obligatorio para oposiciones y lista de admitidos.", "caracter": "obligatorio", "req": "req_ccs", "requisitos": ["CCS"], "documentacion": ["Certificado CCS"], "fuente": "decreto115" },
+          { "id": "h", "paso": 6, "col": "c", "tipo": "procedimiento", "titulo": "Oposición o bolsa", "resumen": "Ingreso libre (38 plazas en 2026) o bolsa de interinos 2026-2027.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Solicitud"], "fuente": "boib21_2026", "enlace": "dgpdocen" },
+          { "id": "i", "paso": 7, "col": "c", "tipo": "resultado", "titulo": "Profesor/a especialista · 0598", "resumen": "Cuerpo de Profesores Especialistas en Sectores Singulares de FP (grupo A2).", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd276" }
+        ],
+        "aristas": [["a","b"],["b","c","TS"],["b","d","Grado"],["b","e","no"],["c","f"],["d","f"],["f","g"],["g","h"],["h","i"]]
+      }
+    },
+    {
+      "id": "expertos", "nombre": "Profesorado experto del sector productivo", "corto": "Profesorado experto", "familia": "laboral", "icono": "briefcase",
+      "lema": "Tu experiencia profesional, en módulos concretos",
+      "ficha": {
+        "destinatarios": "Profesionales con experiencia en el sector, con o sin titulación académica.",
+        "titulaciones": "No exige titulación superior (según bases). Especialidades convocadas: 99009, 99141, 99025, 99106, 99105, 99109, 99110, 99127.",
+        "pedagogica": "No exige Máster ni Curso 60 ECTS.",
+        "experiencia": "Obligatoria: experiencia profesional acreditada en el sector (según bases de 27/09/2023 y de cada convocatoria).",
+        "linguistico": "Según convocatoria específica.",
+        "documentacion": ["Vida laboral", "Contratos o certificados de empresa", "Titulación (si se tiene)"],
+        "procedimiento": ["Convocatoria de lista de expertos (BOIB)", "Solicitud en la sede electrónica", "Valoración de la experiencia", "Contratación laboral temporal cuando se agotan las listas ordinarias"],
+        "organismo": "s_adjudicacio",
+        "enlaces": ["expertos", "dgpdocen"],
+        "normativa": ["loe", "rd659", "res27sep2023", "boib17_2026"],
+        "nota": "Es personal laboral, no funcionario. No confundir con el cuerpo 0598."
+      },
+      "matriz": { "titulacion": "No exigida", "pedagogia": "No exigida", "experiencia": "si", "catalan": "cond", "modo": "Contratación laboral", "centro": "Centros públicos de FP", "docencia": "Módulos profesionales concretos", "organismo": "DGPDoCen" },
+      "requisitos": ["req_exp_sector", "req_catalan_convocatoria"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Profesional del sector", "resumen": "Con o sin titulación académica oficial.", "caracter": "obligatorio", "requisitos": [], "documentacion": [], "fuente": "loe" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "academico", "titulo": "Titulación: no exigida", "resumen": "Según las bases específicas de cada convocatoria.", "caracter": "informativo", "requisitos": [], "documentacion": ["Títulos (si se tienen)"], "fuente": "boib17_2026" },
+          { "id": "c", "paso": 3, "col": "c", "tipo": "experiencia", "titulo": "Experiencia acreditada", "resumen": "Requisito central de esta vía.", "caracter": "obligatorio", "req": "req_exp_sector", "requisitos": ["Experiencia en el sector según bases"], "documentacion": ["Vida laboral", "Contratos / certificados de empresa"], "fuente": "res27sep2023" },
+          { "id": "d", "paso": 4, "col": "l", "tipo": "decision", "titulo": "Marítimo-pesquera", "resumen": "99009 Navegación e Inst. Marinas · 99141 Navegación y Pesca Litoral", "caracter": "condicional", "requisitos": [], "documentacion": [], "fuente": "boib17_2026" },
+          { "id": "e", "paso": 4, "col": "c", "tipo": "decision", "titulo": "Electricidad · IMA · Vehículos", "resumen": "99025, 99106, 99105, 99110, 99109", "caracter": "condicional", "requisitos": [], "documentacion": [], "fuente": "boib17_2026" },
+          { "id": "f", "paso": 4, "col": "r", "tipo": "decision", "titulo": "Informática", "resumen": "99127 Sistemas y Aplicaciones Informáticas", "caracter": "condicional", "requisitos": [], "documentacion": [], "fuente": "boib17_2026" },
+          { "id": "g", "paso": 5, "col": "c", "tipo": "pedagogico", "titulo": "Sin Máster ni 60 ECTS", "resumen": "No se exige formación pedagógica.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "loe" },
+          { "id": "h", "paso": 6, "col": "c", "tipo": "linguistico", "titulo": "Catalán según convocatoria", "resumen": "Consultar las bases de cada convocatoria.", "caracter": "condicional", "req": "req_catalan_convocatoria", "requisitos": [], "documentacion": [], "fuente": "boib17_2026" },
+          { "id": "i", "paso": 7, "col": "c", "tipo": "procedimiento", "titulo": "Solicitud en la sede CAIB", "resumen": "Inscripción en la lista de expertos.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Solicitud"], "fuente": "res27sep2023", "enlace": "expertos" },
+          { "id": "j", "paso": 8, "col": "c", "tipo": "resultado", "titulo": "Contrato laboral temporal", "resumen": "Para módulos concretos cuando se agotan las vías ordinarias.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd659" }
+        ],
+        "aristas": [["a","b"],["b","c"],["c","d"],["c","e"],["c","f"],["d","g"],["e","g"],["f","g"],["g","h"],["h","i"],["i","j"]]
+      }
+    },
+    {
+      "id": "gradosABC", "nombre": "Docencia en grados A, B y C (SOIB)", "corto": "Grados A, B y C", "familia": "sistemafp", "icono": "blocks",
+      "lema": "Acreditaciones, certificados de competencia y certificados profesionales",
+      "ficha": {
+        "destinatarios": "Titulados universitarios, Técnicos y Técnicos Superiores, titulares de certificado profesional de nivel 2-3 y expertos con 4 años de experiencia.",
+        "titulaciones": "Art. 168.1 RD 659/2023: a) titulación relacionada (universitaria, Técnico, TS o CP 2-3); b) cuerpo docente de FP; c) 4 años de experiencia.",
+        "pedagogica": "Certificado profesional SSCE0110 o exención (Pedagogía, Psicopedagogía, Magisterio; universitario + CAP; Máster; Curso 60 ECTS; 600 h de docencia en 10 años).",
+        "experiencia": "Solo en la vía de experto: 4 años ajustados al estándar de competencia.",
+        "linguistico": "No exige CCS por norma general (según acción formativa).",
+        "documentacion": ["Título o experiencia acreditada", "SSCE0110 o documento de exención", "Declaración responsable del centro (Anexo 1 Instrucción 6/2025)"],
+        "procedimiento": ["Comprobar en el RD del certificado la titulación del formador", "Obtener el SSCE0110 o acreditar exención", "Selección por el centro", "El centro verifica requisitos y presenta declaración responsable"],
+        "organismo": "soib",
+        "enlaces": ["soib"],
+        "normativa": ["lo3_2022", "rd659", "instr6_2025"],
+        "nota": "El SSCE0110 no sustituye al Máster: no habilita para ESO, Bachillerato ni ciclos formativos."
+      },
+      "matriz": { "titulacion": "Univ., Técnico, TS, CP o 4 años", "pedagogia": "SSCE0110", "experiencia": "cond", "catalan": "no", "modo": "Contratación", "centro": "Centros SOIB y acreditados", "docencia": "Grados A, B y C", "organismo": "SOIB" },
+      "requisitos": ["req_tit_abc", "req_ssce0110", "req_contenidos"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Quiero impartir grados A, B o C", "resumen": "Formación fuera del sistema educativo, gestionada por el SOIB.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "lo3_2022" },
+          { "id": "b", "paso": 2, "col": "l", "tipo": "academico", "titulo": "a) Titulación relacionada", "resumen": "Universitaria, Técnico, TS o CP de nivel 2-3, según el nivel a impartir.", "caracter": "condicional", "req": "req_tit_abc", "requisitos": ["Nivel 1-2: grado medio o CP 2", "Nivel 3: grado superior o CP 3"], "documentacion": ["Título"], "fuente": "rd659" },
+          { "id": "c", "paso": 2, "col": "c", "tipo": "academico", "titulo": "b) Cuerpo docente de FP", "resumen": "Especialidad docente habilitada para FP en el sistema educativo.", "caracter": "condicional", "requisitos": ["Incompatibilidades"], "documentacion": [], "fuente": "rd659" },
+          { "id": "d", "paso": 2, "col": "r", "tipo": "experiencia", "titulo": "c) Experto: 4 años", "resumen": "Experiencia ajustada al estándar de competencia (prioridad: tutor dual o 600 h de docencia).", "caracter": "condicional", "requisitos": ["4 años de experiencia"], "documentacion": ["Vida laboral", "Certificados de empresa"], "fuente": "rd659" },
+          { "id": "e", "paso": 3, "col": "c", "tipo": "decision", "titulo": "Competencia docente", "resumen": "Regla general: SSCE0110, salvo exención.", "caracter": "obligatorio", "req": "req_ssce0110", "requisitos": [], "documentacion": [], "fuente": "instr6_2025" },
+          { "id": "f", "paso": 4, "col": "l", "tipo": "pedagogico", "titulo": "Certificado SSCE0110", "resumen": "Curso en CIFP L'Embat, Centre Blancadona o Centre de la Mar, o acreditación por experiencia (IQPIB).", "caracter": "condicional", "requisitos": ["Grado C SSCE0110"], "documentacion": ["Certificado profesional"], "fuente": "instr6_2025", "enlace": "soib" },
+          { "id": "g", "paso": 4, "col": "r", "tipo": "pedagogico", "titulo": "Exención", "resumen": "Pedagogía/Psicopedagogía/Magisterio, universitario + CAP, Máster, Curso 60 ECTS o 600 h de docencia en 10 años.", "caracter": "condicional", "requisitos": [], "documentacion": ["Título o certificado de horas"], "fuente": "instr6_2025" },
+          { "id": "h", "paso": 5, "col": "c", "tipo": "linguistico", "titulo": "Catalán: no exigido", "resumen": "No exige CCS por norma general (salvo que la acción formativa lo requiera).", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "instr6_2025" },
+          { "id": "i", "paso": 6, "col": "c", "tipo": "procedimiento", "titulo": "Declaración responsable", "resumen": "El centro verifica y custodia la documentación (Anexo 1, Instrucción 6/2025).", "caracter": "obligatorio", "req": "req_contenidos", "requisitos": [], "documentacion": ["Títulos y contratos custodiados por el centro"], "fuente": "instr6_2025" },
+          { "id": "j", "paso": 7, "col": "c", "tipo": "resultado", "titulo": "Formador/a de grados A, B y C", "resumen": "Acreditaciones parciales (A), certificados de competencia (B) y certificados profesionales (C).", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd659" }
+        ],
+        "aristas": [["a","b"],["a","c"],["a","d"],["b","e"],["c","e"],["d","e"],["e","f"],["e","g","exento"],["f","h"],["g","h"],["h","i"],["i","j"]]
+      }
+    },
+    {
+      "id": "privados", "nombre": "Docencia en centros privados y concertados de Secundaria y FP", "corto": "Centros privados", "familia": "laboral", "icono": "building",
+      "lema": "Misma habilitación, contratación directa",
+      "ficha": {
+        "destinatarios": "Titulados universitarios y Técnicos Superiores habilitados.",
+        "titulaciones": "Las mismas que en los centros públicos (arts. 94-95 LOE, RD 1834/2008).",
+        "pedagogica": "Máster de Profesorado (Secundaria y FP) o Curso 60 ECTS (sectores singulares). Obligatorio.",
+        "experiencia": "No exigida por norma.",
+        "linguistico": "CCS en centros concertados (Decreto 115/2001). En privados no concertados: no verificado en la base documental.",
+        "documentacion": ["Título habilitante", "Máster / Curso 60 ECTS", "Certificado CCS (concertados)"],
+        "procedimiento": ["Oferta de empleo o candidatura al centro", "Selección por la titularidad", "Contrato laboral", "En concertados, la Conselleria verifica requisitos para el pago delegado"],
+        "organismo": "dgpdocen",
+        "enlaces": ["dgpdocen"],
+        "normativa": ["loe", "rd1834", "decreto115"],
+        "nota": "No requiere oposición ni bolsa pública."
+      },
+      "matriz": { "titulacion": "Igual que en centros públicos", "pedagogia": "Máster / 60 ECTS", "experiencia": "no", "catalan": "cond", "modo": "Contratación", "centro": "Privados y concertados", "docencia": "ESO, Bachillerato y FP (D y E)", "organismo": "Titularidad del centro" },
+      "requisitos": ["req_habilitacion", "req_pedagogica", "req_ccs_concertados"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Titulación habilitante", "resumen": "Los mismos requisitos mínimos que en los centros públicos.", "caracter": "obligatorio", "req": "req_habilitacion", "requisitos": [], "documentacion": ["Título"], "fuente": "loe" },
+          { "id": "b", "paso": 2, "col": "l", "tipo": "pedagogico", "titulo": "Universitario + Máster", "resumen": "Para ESO, Bachillerato y FP.", "caracter": "condicional", "req": "req_pedagogica", "requisitos": ["Máster de Profesorado"], "documentacion": ["Título de Máster"], "fuente": "rd1834" },
+          { "id": "c", "paso": 2, "col": "r", "tipo": "pedagogico", "titulo": "TS + Curso 60 ECTS", "resumen": "Para las 10 especialidades de sectores singulares.", "caracter": "condicional", "requisitos": ["Curso 60 ECTS"], "documentacion": ["Certificado"], "fuente": "orden2645" },
+          { "id": "d", "paso": 3, "col": "c", "tipo": "experiencia", "titulo": "Experiencia: no exigida", "resumen": "No es requisito por norma.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "loe" },
+          { "id": "e", "paso": 4, "col": "c", "tipo": "linguistico", "titulo": "Concertados: CCS", "resumen": "La Conselleria verifica titulación y catalán para el pago delegado.", "caracter": "condicional", "req": "req_ccs_concertados", "requisitos": ["CCS (concertados)"], "documentacion": ["Certificado CCS"], "fuente": "decreto115" },
+          { "id": "f", "paso": 5, "col": "c", "tipo": "procedimiento", "titulo": "Selección por el centro", "resumen": "Contratación laboral directa, sin oposición ni bolsa pública.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Currículum", "Títulos"], "fuente": "loe" },
+          { "id": "g", "paso": 6, "col": "c", "tipo": "resultado", "titulo": "Docente en centro privado o concertado", "resumen": "ESO, Bachillerato y FP (grados D y E).", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "loe" }
+        ],
+        "aristas": [["a","b"],["a","c"],["b","d"],["c","d"],["d","e"],["e","f"],["f","g"]]
+      }
+    },
+    {
+      "id": "fpempleo", "nombre": "Centros y entidades de formación profesional para el empleo", "corto": "Entidades de FP para el empleo", "familia": "sistemafp", "icono": "users",
+      "lema": "Entidades acreditadas, centros privados autorizados y empresas",
+      "ficha": {
+        "destinatarios": "Formadores que cumplen el art. 168 RD 659/2023.",
+        "titulaciones": "Titulación relacionada, cuerpo docente de FP o 4 años de experiencia. Dirección académica: titulación del art. 168.1.a.",
+        "pedagogica": "SSCE0110 o exención.",
+        "experiencia": "Solo en la vía de experto (4 años).",
+        "linguistico": "No exigido por norma general.",
+        "documentacion": ["Título o experiencia", "SSCE0110 o exención", "Contrato con la entidad"],
+        "procedimiento": ["Oferta de empleo o bolsa propia de la entidad", "Selección privada", "La entidad presenta declaración responsable ante el SOIB", "Custodia de títulos y contratos para inspección"],
+        "organismo": "soib",
+        "enlaces": ["soib"],
+        "normativa": ["rd659", "instr6_2025"],
+        "nota": "La selección la realiza la propia entidad; el SOIB comprueba el cumplimiento."
+      },
+      "matriz": { "titulacion": "Univ., Técnico, TS, CP o 4 años", "pedagogia": "SSCE0110", "experiencia": "cond", "catalan": "no", "modo": "Contratación privada", "centro": "Entidades y empresas", "docencia": "Grados A, B y C", "organismo": "Entidad (supervisión SOIB)" },
+      "requisitos": ["req_tit_abc", "req_ssce0110", "req_contenidos"],
+      "diagrama": {
+        "nodos": [
+          { "id": "a", "paso": 1, "col": "c", "tipo": "inicio", "titulo": "Entidad de formación", "resumen": "Centro privado autorizado, entidad inscrita/acreditada o empresa.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd659" },
+          { "id": "b", "paso": 2, "col": "c", "tipo": "academico", "titulo": "Requisitos del art. 168", "resumen": "Titulación relacionada, cuerpo docente o 4 años de experiencia.", "caracter": "obligatorio", "req": "req_tit_abc", "requisitos": [], "documentacion": ["Título o vida laboral"], "fuente": "rd659" },
+          { "id": "c", "paso": 3, "col": "c", "tipo": "pedagogico", "titulo": "SSCE0110 o exención", "resumen": "Competencia docente para grados A, B y C.", "caracter": "obligatorio", "req": "req_ssce0110", "requisitos": [], "documentacion": ["Certificado o exención"], "fuente": "instr6_2025" },
+          { "id": "d", "paso": 4, "col": "c", "tipo": "procedimiento", "titulo": "Selección privada", "resumen": "Oferta de empleo o bolsa propia de la entidad.", "caracter": "obligatorio", "requisitos": [], "documentacion": ["Currículum"], "fuente": "rd659" },
+          { "id": "e", "paso": 5, "col": "c", "tipo": "procedimiento", "titulo": "Declaración responsable", "resumen": "La entidad declara ante el SOIB que sus formadores cumplen los requisitos.", "caracter": "obligatorio", "req": "req_contenidos", "requisitos": [], "documentacion": ["Anexo 1 Instrucción 6/2025"], "fuente": "instr6_2025", "enlace": "soib" },
+          { "id": "f", "paso": 6, "col": "l", "tipo": "resultado", "titulo": "Formador/a", "resumen": "Impartir grados A, B y C en la entidad.", "caracter": "informativo", "requisitos": [], "documentacion": [], "fuente": "rd659" },
+          { "id": "g", "paso": 6, "col": "r", "tipo": "resultado", "titulo": "Dirección académica", "resumen": "Requiere la titulación del art. 168.1.a (art. 168.3).", "caracter": "condicional", "requisitos": ["Titulación universitaria (según manual)"], "documentacion": [], "fuente": "rd659" }
+        ],
+        "aristas": [["a","b"],["b","c"],["c","d"],["d","e"],["e","f"],["e","g"]]
+      }
+    }
+  ]
+}
